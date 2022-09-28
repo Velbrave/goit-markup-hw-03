@@ -18,6 +18,8 @@
     --first-bg-color: #F5F5F5;
     --second--bg-color: #F5F4FA;
     --primary-addres-color: rgba(255, 255, 255, 0.6);
+    --primary-border-color:#EEEEEE;
+    --second-border-color:#ECECEC;
 }
 
 .visually-hidden {
@@ -89,8 +91,9 @@ body {
 /* -------- heder ---------- */
 
 .heder-fone{
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 26px;
+    padding-bottom: 21px;
+    border: 1px solid var(--second-border-color);
 }
 
 .heder-fone-container {
@@ -161,11 +164,13 @@ body {
 /* ------- hero ------------ */
 
 .hero{
-    padding-top: 200px;
-    padding-bottom: 200px;
+    /* padding-top: 200px;
+    padding-bottom: 200px; */
 }
 
 .hero-container{
+    padding-top: 200px;
+    padding-bottom: 200px;
     align-items: center;
 }
 
@@ -175,7 +180,7 @@ body {
 .hero-title {
     width: 696px;
     margin: 0 auto;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     color: var(--primary-white-color);
     font-weight: 900;
     font-size: 44px;
@@ -185,7 +190,9 @@ body {
     text-align: center;
 }
 .button {
-    padding: 8px 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-width: 216px;
     display: block;
     margin: 0 auto;
     color: var(--primary-white-color);
@@ -195,6 +202,7 @@ body {
     line-height: 1.88;
     letter-spacing: 0.06em;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .button:hover,
@@ -235,7 +243,7 @@ body {
 }
 
 .description-title{
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .description .description-title {
@@ -258,6 +266,15 @@ body {
     padding-bottom: 94px;
 }
 
+.section-profile-title {
+    margin-bottom: 50px;
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
 .box{
     display: flex;
     flex-wrap: wrap;
@@ -268,14 +285,7 @@ body {
     flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
-.section-profile-title{
-    padding-bottom: 59px;
-    color: var(--primary-text-color);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-}
+
 /* -------------------------------- */
 
 /* ------ section-working --------- */
@@ -290,7 +300,7 @@ body {
 }
 
 .section-working-title {
-    padding: 50px;
+    margin-bottom: 50px;
     color: var(--primary-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -306,6 +316,13 @@ body {
 
 .working-page-atem{
     flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
+.working-border-page{
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: var(--primary-white-color);
+    border-top:none;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .working-page .page-title {
@@ -335,21 +352,27 @@ body {
 .page-footer-container{
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 10px;
+    padding-left: 16px;
+}
+
+.logo-desc-item{
+    margin-bottom: 20px;
 }
 
 .logo-desc {
-    padding-bottom: 30px;
+    margin-bottom: 20px;
     color: var(--accent-color);
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+    font-style: normal;
     text-decoration: none;
 }
 
 .logo-desc span {
     color: var(--primary-white-color);
+    text-decoration: none;
 }
 .addres .addres-map a {
     padding-bottom: 10px;
@@ -377,13 +400,39 @@ body {
 /* ----------- PORTFOLIO --------------- */
 
 
+.section-hero{
+    padding-bottom: 94px;
+    background-color: var(--primary-white-color);
+}
+
+.section-hero-title{
+    text-align: center;
+}
+
+.section-button-port{
+    display: flex;
+    padding-top: 94px;
+    margin-bottom: 50px;
+    
+}
+
+.button-port{
+    display: flex;
+    margin: 0 auto;
+    gap: 8px;
+    
+}
+
 .button-port .item {
+    padding: 6px 22px;
     color: var(--primary-text-color);
     background-color: var(--second--bg-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     cursor: pointer;
+    border-radius: 4px;
+    border: none;
 }
 
 .button-port .item:hover,
@@ -392,15 +441,37 @@ body {
     background-color: var(--accent-color);
 }
 
+.hero-page{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hero-page-item{
+    flex-basis: calc((100% - 6 * 30px) / 9);
+}
+
+.hero-page-text{
+    padding: 20px 24px;
+    border: 1px solid var(--primary-border-color);
+    border-top: none;
+}
+
+.page-title{
+    margin-bottom: 4px;
+}
+
 .hero-page .page-title {
     color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
 }
 
 .hero-page .about-text {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
 }
